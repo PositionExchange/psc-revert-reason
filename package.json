@@ -33,7 +33,7 @@
   ],
   "license": "MIT",
   "bin": {
-    "getRevertReason": "cli.js"
+    "psc-revert-reason": "cli.js"
   },
   "dependencies": {
     "ethers": "5.7.2"
