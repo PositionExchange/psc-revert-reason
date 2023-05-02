@@ -6,7 +6,7 @@ const [,, ...args] = process.argv
 
 async function run() {
   const txHash = args[0]
-  const network = args[1] || 'mainnet'
+  const network = args[1] || 'psc_testnet'
   const blockNumber = args[2] || undefined
   const provider = args[3] || undefined
 

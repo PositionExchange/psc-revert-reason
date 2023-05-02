@@ -20,7 +20,13 @@ async function getRevertReason (txHash, network = 'mainnet', blockNumber = undef
     const code = await getCode(tx, network, blockNumber, provider)
     return decodeMessage(code, network)
   } catch (err) {
-    throw  new Error('Unable to decode revert reason.')
+    if(/reverted/.test(err.message)){
+      return err.message
+    }else{
+      console.log("e",err.message)
+      throw  new Error('Unable to decode revert reason.')
+    }
+    
   }
 }
 
@@ -37,7 +43,7 @@ async function validateInputPreProvider(txHash, network) {
     throw new Error('Invalid transaction hash')
   }
 
-  const networks = ['mainnet', 'kovan', 'goerli', 'ropsten', 'rinkeby']
+  const networks = ['mainnet', 'kovan', 'goerli', 'ropsten', 'rinkeby', 'psc_testnet', 'psc_mainnet']
   if (!networks.includes(network)) {
     throw new Error('Not a valid network')
   }
@@ -49,6 +55,13 @@ function getProvider(customProvider, network) {
   if (customProvider && customProvider.version) {
     customProvider = new ethers.providers.Web3Provider(customProvider.currentProvider)
   }
+  if (network === 'psc_testnet' || network === 'psc_mainnet') {
+    customProvider = new ethers.providers.JsonRpcProvider({
+      psc_testnet: 'https://api.s0.t.posichain.org',
+      psc_mainnet: 'https://api.posichain.org'
+    }[network])
+  }
+
   return customProvider || ethers.getDefaultProvider(network)
 }
 
