@@ -4,6 +4,9 @@
   "description": "Get the revert reason from an POSIChain transaction hash",
   "main": "index.js",
   "types": "index.d.ts",
+  "engines": {
+    "node": ">=14.0.0"
+  },
   "scripts": {
     "publish-module": "npm publish --access public",
     "dist-tag": "npm dist-tag add \"psc-revert-reason@$(jq -r .version <package.json)\" latest",
