@@ -8,7 +8,7 @@
 ## Install
 
 ```bash
- yarn add 'PositionExnchange/psc-revert-reason' --global
+ yarn global add 'PositionExchange/psc-revert-reason'
 ```
 
 ## Getting started
