@@ -14,11 +14,23 @@
 ## Getting started
 
 ```bash
-npx psc-revert-reason [tx_hash]
+psc-revert-reason [tx_hash]
 # Specific network
-npx psc-revert-reason [tx_hash] [psc_testnet|psc_mainnet]
+psc-revert-reason [tx_hash] [psc_testnet|psc_mainnet]
+```
+
+## Notes
+
+Make sure you have add yarn bin to your $PATH
+
+For bash for example, you can add this line at the end of your .bashrc:
 
 ```
+export PATH="$(yarn global bin):$PATH"
+```
+
+
+More info: https://classic.yarnpkg.com/lang/en/docs/cli/global/
 
 ## Future work
 The following features will be added over time:
