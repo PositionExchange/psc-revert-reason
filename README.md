@@ -1,6 +1,6 @@
-# eth-revert-reason
+# psc-revert-reason
 
-> Get the revert reason from a tx hash on Ethereum
+> Get the revert reason from a tx hash on POSIChain
 
 [![License](http://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/authereum/eth-revert-reason/master/LICENSE)
 [![NPM version](https://badge.fury.io/js/eth-revert-reason.svg)](http://badge.fury.io/js/eth-revert-reason)
@@ -8,22 +8,15 @@
 ## Install
 
 ```bash
- yarn add 'qtnx/eth-revert-reason' --global
+ yarn add 'PositionExnchange/psc-revert-reason' --global
 ```
-
-## Notes
-1. For now, this works consistently with the [Infura](https://infura.io/) and [Alchemy](https://docs.alchemyapi.io/) providers. Any other providers that you pass in may not work.
-2. There are rare cases where a revert reason may be 'x' from the context of one block but it will be 'y' from the context of another block. This may cause inconsistencies.
-3. This package relies on the ethers.js default provider. This provider may be subject to rate limits or inconsistencies. For consistent results, please pass in your own provider.
-4. Alchemy's provider v2 uses Geth.
-
 
 ## Getting started
 
 ```bash
-npx eth-revert-reason [tx_hash]
+npx psc-revert-reason [tx_hash]
 # Specific network
-npx eth-revert-reason [tx_hash] [psc_testnet|psc_mainnet]
+npx psc-revert-reason [tx_hash] [psc_testnet|psc_mainnet]
 
 ```
 

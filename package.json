@@ -1,23 +1,23 @@
 {
-  "name": "eth-revert-reason",
+  "name": "psc-revert-reason",
   "version": "1.0.3",
-  "description": "Get the revert reason from an Ethereum transaction hash",
+  "description": "Get the revert reason from an POSIChain transaction hash",
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
     "publish-module": "npm publish --access public",
-    "dist-tag": "npm dist-tag add \"eth-revert-reason@$(jq -r .version <package.json)\" latest",
+    "dist-tag": "npm dist-tag add \"psc-revert-reason@$(jq -r .version <package.json)\" latest",
     "release": "npm test && npm run publish-module && npm run dist-tag",
     "test": "jest test/*.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/authereum/eth-revert-reason"
+    "url": "https://github.com/authereum/psc-revert-reason"
   },
   "bugs": {
-    "url": "https://github.com/authereum/eth-revert-reason/issues"
+    "url": "https://github.com/authereum/psc-revert-reason/issues"
   },
-  "homepage": "https://github.com/authereum/eth-revert-reason",
+  "homepage": "https://github.com/authereum/psc-revert-reason",
   "author": {
     "name": "Shane Fontaine",
     "email": "shane.fontaine@authereum.com",
