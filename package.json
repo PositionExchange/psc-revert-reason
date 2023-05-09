@@ -1,6 +1,6 @@
 {
   "name": "psc-revert-reason",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Get the revert reason from an POSIChain transaction hash",
   "main": "index.js",
   "types": "index.d.ts",
