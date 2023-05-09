@@ -57,7 +57,7 @@ function getProvider(customProvider, network) {
   }
   if (network === 'psc_testnet' || network === 'psc_mainnet') {
     customProvider = new ethers.providers.JsonRpcProvider({
-      psc_testnet: 'https://api.s0.t.posichain.org',
+      psc_testnet: 'https://api.t.posichain.org',
       psc_mainnet: 'https://api.posichain.org'
     }[network])
   }
